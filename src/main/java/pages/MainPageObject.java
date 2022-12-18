@@ -18,7 +18,7 @@ public class MainPageObject {
 
     protected final SelenideElement profileButtonWithEmail = $x(".//a[@data-ti='user_name_link'][text()='"+VALID_EMAIL+"']");
 
-    protected final SelenideElement negativeLoginError = $x(".//span[@class='styles__error__zhfb2 o3356 o3367'][text()='Превышен лимит ввода неверных логина или пароля. Повторите попытку через несколько минут.']");
+    protected final SelenideElement negativeLoginError = $x(".//span[starts-with( text(),'Неверный адрес почты или пароль.')]");
 
     protected final SelenideElement emptyEmailLoginError = $x(".//span[text()='Без адреса электронной почты никак.']");
 

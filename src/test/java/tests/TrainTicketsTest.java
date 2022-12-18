@@ -7,10 +7,19 @@ import test_config.TestConfig;
 public class TrainTicketsTest extends TestConfig {
 
     @Test
-    @Description("Валидный выбор билетов")
-    public void validOrderTicketTest() {
+    @Description("Проверка отображения списка билетов")
+    public void getTicketListCheck() {
         mainPage.loginWithValidData();
         mainPage.clickOnChooseTrainTicketButton();
-        trainTicketPage.chooseTrainTickets();
+        trainTicketPage.isTicketListDisplayed();
     }
+
+    @Test
+    @Description("Проверка возможности выбора билета")
+    public void chooseTicketTest() {
+        mainPage.loginWithValidData();
+        mainPage.clickOnChooseTrainTicketButton();
+        trainTicketPage.orderingTrainTickets();
+    }
+
 }

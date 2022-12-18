@@ -15,6 +15,7 @@ public abstract class TestConfig {
 
     @BeforeEach
     public void setUp() {
+        Configuration.browserSize = "1920x1080";
         open(BASE_URI);
     }
 

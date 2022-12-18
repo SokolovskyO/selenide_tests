@@ -20,4 +20,10 @@ public class TrainTicketsOrderPage {
 
     protected final SelenideElement choosePlaceButton = $x(".//div[text()='Выбрать места']");
 
+    protected final SelenideElement startChoosingSeatButton = $x("(.//button[@class='order-group-element o33551 o33557'][@data-ti='order-button'])[1]");
+
+    protected final SelenideElement toPassengersButton = $x(".//button[@class='order-group-element o33551 o33554 o33558']");
+
+    protected final SelenideElement continueRegistrationButton = $x(".//span[text()='Продолжить']");
+
 }
