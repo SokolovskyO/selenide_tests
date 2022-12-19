@@ -12,7 +12,7 @@ public class MainPage extends MainPageObject {
 
     @Step("Логинимся с валидными данными")
     public void loginWithValidData() {
-        logoutButton.shouldBe(visible, Duration.ofSeconds(10));
+        loginButton.shouldBe(visible, Duration.ofSeconds(10));
         loginButton.click();
         emailField.shouldBe(visible, Duration.ofSeconds(10));
         emailField.sendKeys(VALID_EMAIL);
