@@ -28,13 +28,4 @@ public class MainPageObject {
 
     protected final SelenideElement trainTicketsButton = $x(".//span[@class='styles__caption__26sCy styles__caption__LoDUe'][text()='Ж/д билеты']");
 
-    protected final SelenideElement airTicketsButton = $x(".//span[@class='styles__caption__26sCy styles__caption__LoDUe'][text()='Авиабилеты']");
-
-    protected final SelenideElement busTicketsButton = $x(".//span[@class='styles__caption__26sCy styles__caption__LoDUe'][text()='Автобусы']");
-
-    protected final SelenideElement HotelsButton = $x(".//span[@class='styles__caption__26sCy styles__caption__LoDUe'][text()='Отели']");
-
-
-
-
 }

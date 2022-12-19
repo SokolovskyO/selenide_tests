@@ -12,8 +12,9 @@ public class MainPage extends MainPageObject {
 
     @Step("Логинимся с валидными данными")
     public void loginWithValidData() {
+        logoutButton.shouldBe(visible, Duration.ofSeconds(10));
         loginButton.click();
-        emailField.shouldBe(visible, Duration.ofSeconds(30));
+        emailField.shouldBe(visible, Duration.ofSeconds(10));
         emailField.sendKeys(VALID_EMAIL);
         passwordField.sendKeys(VALID_PASSWORD);
         enterButton.click();
@@ -21,11 +22,13 @@ public class MainPage extends MainPageObject {
 
     @Step("Нажатие на кнопку выхода (logout)")
     public void clickOnLogoutButton() {
+        logoutButton.shouldBe(visible, Duration.ofSeconds(10));
         logoutButton.click();
     }
 
     @Step("Попытка логина с невалидным email")
     public void loginWithInvalidEmail() {
+        loginButton.shouldBe(visible, Duration.ofSeconds(10));
         loginButton.click();
         emailField.sendKeys(INVALID_EMAIL);
         passwordField.sendKeys(VALID_PASSWORD);
@@ -34,6 +37,7 @@ public class MainPage extends MainPageObject {
 
     @Step("Попытка логина с невалидным паролем")
     public void loginWithInvalidPassword() {
+        loginButton.shouldBe(visible, Duration.ofSeconds(10));
         loginButton.click();
         emailField.sendKeys(VALID_EMAIL);
         passwordField.sendKeys(INVALID_PASSWORD);
@@ -42,38 +46,43 @@ public class MainPage extends MainPageObject {
 
     @Step("Попытка логина без email и пароля")
     public void loginWithoutEmailAndPassword() {
+        loginButton.shouldBe(visible, Duration.ofSeconds(10));
         loginButton.click();
         enterButton.click();
     }
 
     @Step("Проверка отображения кнопки входа")
-    public void isLoginButtonDisplayed() {
-        loginButton.shouldBe(visible);
+    public boolean isLoginButtonDisplayed() {
+        loginButton.shouldBe(visible,Duration.ofSeconds(10));
+        return loginButton.isDisplayed();
     }
 
     @Step("Проверяем, виден ли email залогинненого пользователя")
     public void isEmailFieldDisplayed() {
-        profileButtonWithEmail.shouldBe(visible);
+        profileButtonWithEmail.shouldBe(visible, Duration.ofSeconds(10));
     }
 
     @Step("Проверяем отображение сообщения неудавшегося логина")
-    public void isLoginErrorDisplayed() {
-        negativeLoginError.shouldBe(visible);
+    public boolean isLoginErrorDisplayed() {
+        negativeLoginError.shouldBe(visible, Duration.ofSeconds(10));
+        return negativeLoginError.isDisplayed();
     }
 
-    @Step("Проверка отображения сообщения о незаполненном email")
-    public void isEmptyEmailFieldErrorDisplayed() {
-        emptyEmailLoginError.shouldBe(visible);
+    @Step("Проверяем отображение сообщения о незаполненном email")
+    public boolean isEmptyEmailFieldErrorDisplayed() {
+        emptyEmailLoginError.shouldBe(visible, Duration.ofSeconds(10));
+        return emptyEmailLoginError.isDisplayed();
     }
 
-    @Step("Провека отображения сообщения о незаполненном пароле")
-    public void isEmptyPasswordFieldErrorDisplayed() {
-        emptyPasswordLoginError.shouldBe(visible);
+    @Step("Провеояем отображение сообщения о незаполненном пароле")
+    public boolean isEmptyPasswordFieldErrorDisplayed() {
+        emptyPasswordLoginError.shouldBe(visible, Duration.ofSeconds(10));
+        return emptyPasswordLoginError.isDisplayed();
     }
 
     @Step("Нажимаем на кнопку выбора Ж/Д билетов")
     public void clickOnChooseTrainTicketButton() {
-        trainTicketsButton.shouldBe(visible, Duration.ofSeconds(30));
+        trainTicketsButton.shouldBe(visible, Duration.ofSeconds(10));
         trainTicketsButton.click();
     }
 }

@@ -4,7 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import pages.MainPageObject;
+import steps.BuyTicketPage;
 import steps.MainPage;
 import steps.TrainTicketPage;
 
@@ -29,5 +29,6 @@ public abstract class TestConfig {
 
     protected TrainTicketPage trainTicketPage = new TrainTicketPage();
 
+    protected BuyTicketPage buyTicketPage = new BuyTicketPage();
 
 }

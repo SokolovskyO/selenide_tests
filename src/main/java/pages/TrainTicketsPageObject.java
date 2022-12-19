@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class TrainTicketsOrderPage {
+public class TrainTicketsPageObject {
 
     protected final SelenideElement fromField = $x(".//input[@class='input_field j-station_input  j-station_input_from'][@placeholder='Откуда']");
 
@@ -25,5 +25,7 @@ public class TrainTicketsOrderPage {
     protected final SelenideElement toPassengersButton = $x(".//button[@class='order-group-element o33551 o33554 o33558']");
 
     protected final SelenideElement continueRegistrationButton = $x(".//span[text()='Продолжить']");
+
+    protected final SelenideElement localTimetable = $x(".//h1[starts-with(text(),'Расписание поездов:')]");
 
 }
