@@ -16,6 +16,6 @@ public class PassengerDateGenerator {
         passengerCreateRequest.setDate("0" + RandomStringUtils.randomNumeric(1) + "0" + RandomStringUtils.randomNumeric(1) + "19" + RandomStringUtils.randomNumeric(2));
         passengerCreateRequest.setDocumentNumber("3416" + RandomStringUtils.randomNumeric(6));
         passengerCreateRequest.setPhone("7800" + RandomStringUtils.randomNumeric(7));
-        return  passengerCreateRequest;
+        return passengerCreateRequest;
     }
 }

@@ -1,18 +1,17 @@
 package dto;
 
 public class PassengerCreateRequest {
+    private String firstName;
 
-    public String firstName;
+    private String lastName;
 
-    public String lastName;
+    private String patronymic;
 
-    public String patronymic;
+    private String date;
 
-    public String date;
+    private String documentNumber;
 
-    public String documentNumber;
-
-    public String phone;
+    private String phone;
 
 
     public String getFirstName() {

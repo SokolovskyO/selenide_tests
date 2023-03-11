@@ -2,13 +2,13 @@ package config;
 
 public abstract class Config {
 
-    public final static String BASE_URI =  "https://www.tutu.ru/";
+    protected static final String BASE_URI = "https://www.tutu.ru/";
 
-    public final static String VALID_EMAIL = "MyTestAccount999@yandex.ru";
+    protected final static String VALID_EMAIL = "MyTestAccount999@yandex.ru";
 
-    public final static String VALID_PASSWORD = "mytestpassword123";
+    protected final static String VALID_PASSWORD = "mytestpassword123";
 
-    public final static String INVALID_EMAIL = "invalidemail@yandex.ru";
+    protected final static String INVALID_EMAIL = "invalidemail@yandex.ru";
 
-    public final static String INVALID_PASSWORD = "invalidpassword";
+    protected final static String INVALID_PASSWORD = "invalidpassword";
 }
