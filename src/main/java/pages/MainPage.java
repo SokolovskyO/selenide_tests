@@ -27,7 +27,7 @@ public class MainPage extends Config {
 
     private final SelenideElement emptyPasswordLoginError = $x("//span[text()='Без пароля никак.']");
 
-    private final SelenideElement logoutButton = $x("//a[text()='Мои заказы']//..//div//span//child::*");
+    private final SelenideElement logoutButton = $x("//div[contains(@class, 'authorized-user-info')]//div");
 
     private final SelenideElement trainTicketsButton = $x("//span[text()='Ж/д билеты']");
 
@@ -71,7 +71,7 @@ public class MainPage extends Config {
         loginButton.shouldBe(visible.because("Кнопка входа не отображена"), Duration.ofSeconds(10));
     }
 
-    @Step("Проверяем, виден ли email залогиненного пользователя")
+    @Step("Проверяем видимость email залогиненного пользователя")
     public void isEmailFieldDisplayed() {
         profileButtonWithEmail.shouldBe(visible.because("Email залогиненного пользователя не отображается после входа"), Duration.ofSeconds(10));
     }

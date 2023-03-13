@@ -1,6 +1,7 @@
 package dto;
 
 public class PassengerCreateRequest {
+    // объявил переменные для генерации геттеров и сеттеров
     private String firstName;
 
     private String lastName;
@@ -12,8 +13,7 @@ public class PassengerCreateRequest {
     private String documentNumber;
 
     private String phone;
-
-
+    // сгенерировал геттеры + сеттеры
     public String getFirstName() {
         return firstName;
     }

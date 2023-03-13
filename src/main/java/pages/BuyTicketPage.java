@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import config.Config;
 import dto.PassengerCreateRequest;
 import io.qameta.allure.Step;
+
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -11,19 +12,19 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class BuyTicketPage extends Config {
 
-    private final SelenideElement firstNameField = $x("//span[text()='Имя']//..//..//div[2]");
+    private final SelenideElement firstNameField = $x("//span[text()='Имя']//..//..//descendant::input");
 
-    private final SelenideElement lastNameField = $x("//span[text()='Фамилия']//..//..//div[2]");
+    private final SelenideElement lastNameField = $x("//span[text()='Фамилия']//..//..//descendant::input");
 
-    private final SelenideElement patronymicField = $x("//span[text()='Отчество']//..//..//div[2]");
+    private final SelenideElement patronymicField = $x("//span[text()='Отчество']//..//..//descendant::input");
 
     private final SelenideElement genderManButton = $x("//button[@data-ti='gender_m']");
 
     private final SelenideElement birthdayField = $x("//input[@data-ti='birth_date']");
 
-    private final SelenideElement documentField = $x("//span[text()='Номер документа']//..//..//div[2]");
+    private final SelenideElement documentField = $x("//input[@data-ti='doc_number']");
 
-    private final SelenideElement phoneField = $x("//input[@autocomplete='phone']");
+    private final SelenideElement phoneField = $x("//span[text()='Моб. телефон']//..//..//descendant::input");
 
     private final SelenideElement checkBox = $x("//span[text()='Даю']//..//..//input");
 

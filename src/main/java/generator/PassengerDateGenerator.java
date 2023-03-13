@@ -6,7 +6,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import java.util.Locale;
 
 public class PassengerDateGenerator {
-
+    // метод генерирует рандомные данные клиента через сеттеры, с помощью java faker
     public static PassengerCreateRequest getRandomPassenger() {
         Faker faker = new Faker(new Locale("ru"));
         PassengerCreateRequest passengerCreateRequest = new PassengerCreateRequest();
